@@ -92,11 +92,11 @@ Config.Stores = {
  
     Pharmacy_Items_SELL = {            
     --Medicine
-{ itemLabel = "Acetaminophen", itemName = "tylenol", currencyType = "cash", sellprice = 15, randomprice = math.random(40, 65), desc = "Sell Acetaminophen", category = "Medicine" },
-{ itemLabel = "Plastic Surgery Appointement", itemName = "secondchance", currencyType = "cash", sellprice = 150, randomprice = math.random(40, 65), desc = "Sell Plastic Surgery Appointment", category = "Medicine" },
+{ itemLabel = "Acetaminophen", itemName = "tylenol", currencyType = "cash", item_price = 15, randomprice = math.random(40, 65), desc = "Sell Acetaminophen", category = "Medicine" },
+{ itemLabel = "Plastic Surgery Appointement", itemName = "secondchance", currencyType = "cash", item_price = 150, randomprice = math.random(40, 65), desc = "Sell Plastic Surgery Appointment", category = "Medicine" },
 --Firstaid
-{ itemLabel = "Bandage", itemName = "bandage", currencyType = "cash", sellprice = 10, randomprice = math.random(40, 65), desc = "Sell Bandage", category = "Firstaid" },
-{ itemLabel = "Anti-Poison", itemName = "antipoison", currencyType = "cash", sellprice = 10, randomprice = math.random(40, 65), desc = "Sell Anti-Poison", category = "Firstaid" }
+{ itemLabel = "Bandage", itemName = "bandage", currencyType = "cash", item_price = 10, randomprice = math.random(40, 65), desc = "Sell Bandage", category = "Firstaid" },
+{ itemLabel = "Anti-Poison", itemName = "antipoison", currencyType = "cash", item_price = 10, randomprice = math.random(40, 65), desc = "Sell Anti-Poison", category = "Firstaid" }
 
  }
  
@@ -155,11 +155,11 @@ Config.SellItems = {
    
     Pharmacy_Items_BUY = {            
     --Medicine
-        { itemLabel = "Acetaminophen", itemName = "tylenol", currencyType = "cash", buyprice = 15, randomprice = math.random(40, 65), desc = "Buy Acetaminophen", category = "Medicine" },
-        { itemLabel = "Plastic Surgery Appointement", itemName = "secondchance", currencyType = "cash", buyprice = 150, randomprice = math.random(40, 65), desc = "Buy Plastic Surgery Appointement", category = "Medicine" },
+        { itemLabel = "Acetaminophen", itemName = "tylenol", currencyType = "cash", item_price = 15, randomprice = math.random(40, 65), desc = "Buy Acetaminophen", category = "Medicine" },
+        { itemLabel = "Plastic Surgery Appointement", itemName = "secondchance", currencyType = "cash", item_price = 150, randomprice = math.random(40, 65), desc = "Buy Plastic Surgery Appointement", category = "Medicine" },
     --Firstaid
-        { itemLabel = "Bandage", itemName = "bandage", currencyType = "cash", buyprice = 10, randomprice = math.random(40, 65), desc = "Buy Bandage", category = "Firstaid" },
-        { itemLabel = "Anti-Poison", itemName = "antipoison", currencyType = "cash", buyprice = 10, randomprice = math.random(40, 65), desc = "Buy Anti-Poison", category = "Firstaid" }
+        { itemLabel = "Bandage", itemName = "bandage", currencyType = "cash", item_price = 10, randomprice = math.random(40, 65), desc = "Buy Bandage", category = "Firstaid" },
+        { itemLabel = "Anti-Poison", itemName = "antipoison", currencyType = "cash", item_price = 10, randomprice = math.random(40, 65), desc = "Buy Anti-Poison", category = "Firstaid" }
     }
 
         
