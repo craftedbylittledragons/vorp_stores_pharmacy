@@ -52,8 +52,8 @@ Config.Stores = {
         storeName = "Valentine Pharmacy",
         PromptName = "Pharmacy",
         sprite = 1109348405,
-        x = -288.03, y = 804.23, z = 119.39, h = 297.74,
-        distanceOpenStore = 2.5,
+        x = -288.24, y = 805.24, z = 119.39, h = 297.74,        
+        distanceOpenStore = 2,
         NpcAllowed = true,
         NpcModel = "U_M_M_RHDDOCTOR_01",
         AllowedJobs = {}, -- jobs allowed
@@ -64,8 +64,29 @@ Config.Stores = {
         RandomPrices = false,
         StoreOpen = 7, -- am
         StoreClose = 21 -- pm
-
     },
+
+ 
+    ValMedic = {
+        blipAllowed = false,
+        BlipName = "Medic",
+        storeName = "Valentine Medic",
+        PromptName = "Medic",
+        sprite = 1109348405,
+        --x = -288.03, y = 804.23, z = 119.39, h = 297.74,
+        x = -289.71, y = 808.5, z = 119.39, h = 297.74,
+        distanceOpenStore = 2,
+        NpcAllowed = false,
+        NpcModel = "U_M_M_RHDDOCTOR_01",
+        AllowedJobs = {"doctor"}, -- jobs allowed
+        JobGrade = 0,
+        category = {"Syringe"},
+        storeType = { "Buy", "Sell" }, -- only one type
+        StoreHoursAllowed = false,
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+    },    
 -----------------------------------------------------------------------------
 --------------------------------------Vanhorn--------------------------------
 -----------------------------------------------------------------------------
@@ -91,14 +112,18 @@ Config.Stores = {
     -- category = where the item will be displayed at
  
     Pharmacy_Items_SELL = {            
-    --Medicine
-{ itemLabel = "Acetaminophen", itemName = "tylenol", currencyType = "cash", item_price = 15, randomprice = math.random(40, 65), desc = "Sell Acetaminophen", category = "Medicine" },
-{ itemLabel = "Plastic Surgery Appointement", itemName = "secondchance", currencyType = "cash", item_price = 150, randomprice = math.random(40, 65), desc = "Sell Plastic Surgery Appointment", category = "Medicine" },
---Firstaid
-{ itemLabel = "Bandage", itemName = "bandage", currencyType = "cash", item_price = 10, randomprice = math.random(40, 65), desc = "Sell Bandage", category = "Firstaid" },
-{ itemLabel = "Anti-Poison", itemName = "antipoison", currencyType = "cash", item_price = 10, randomprice = math.random(40, 65), desc = "Sell Anti-Poison", category = "Firstaid" }
+        --Medicine
+        { itemLabel = "Acetaminophen", itemName = "tylenol", currencyType = "cash", item_price = 15, randomprice = math.random(40, 65), desc = "Sell Acetaminophen", category = "Medicine" },
+        { itemLabel = "Plastic Surgery Appointement", itemName = "secondchance", currencyType = "cash", item_price = 150, randomprice = math.random(40, 65), desc = "Sell Plastic Surgery Appointment", category = "Medicine" },
+        --Firstaid
+        { itemLabel = "Bandage", itemName = "bandage", currencyType = "cash", item_price = 10, randomprice = math.random(40, 65), desc = "Sell Bandage", category = "Firstaid" },
+        { itemLabel = "Anti-Poison", itemName = "antipoison", currencyType = "cash", item_price = 10, randomprice = math.random(40, 65), desc = "Sell Anti-Poison", category = "Firstaid" }
+    }
 
- }
+    Medic_Items_SELL = {            
+        --Firstaid
+        { itemLabel = "Syringe", itemName = "syringe", currencyType = "cash", item_price = 0, randomprice = math.random(40, 65), desc = "Syringe", category = "Syringe" },    
+    }
  
 -----------------------------------------------------------------------------
 --------------------------------------SELL ITEMS ----------------------------
@@ -136,6 +161,7 @@ Config.SellItems = {
     -----------------------------------------------------------------------------
  
         ValPharmacy = Pharmacy_Items_SELL,
+        ValMedic = Medic_Items_SELL
     -----------------------------------------------------------------------------
     --------------------------------------Vanhorn--------------------------------
     -----------------------------------------------------------------------------
@@ -162,7 +188,11 @@ Config.SellItems = {
         { itemLabel = "Anti-Poison", itemName = "antipoison", currencyType = "cash", item_price = 10, randomprice = math.random(40, 65), desc = "Buy Anti-Poison", category = "Firstaid" }
     }
 
-        
+      
+    Medic_Items_BUY  = {            
+        --Firstaid
+        { itemLabel = "Syringe", itemName = "syringe", currencyType = "cash", item_price = 0, randomprice = math.random(40, 65), desc = "Buy Syringe", category = "Syringe" },    
+    }  
 -----------------------------------------------------------------------------
 --------------------------------------BUY ITEMS ----------------------------
 -----------------------------------------------------------------------------
@@ -199,6 +229,7 @@ Config.BuyItems = {
     -----------------------------------------------------------------------------
  
         ValPharmacy = Pharmacy_Items_BUY,
+        ValMedic = Medic_Items_BUY,
     -----------------------------------------------------------------------------
     --------------------------------------Vanhorn--------------------------------
     -----------------------------------------------------------------------------
